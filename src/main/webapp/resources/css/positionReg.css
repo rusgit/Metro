@@ -1,0 +1,26 @@
+
+.dispNone {
+	display: none;
+}
+
+#buttonReg {
+	float: right;
+	margin: 0 12px 0 0;
+}
+
+#email {
+	width: 200px;
+}
+
+#emailOK {
+	left: 230px ;
+}
+
+#emailX {
+	left: 230px ;
+}
+
+#emailInfo {
+	left: 265px;
+	
+}

@@ -1,0 +1,37 @@
+a {
+	text-decoration: none;
+	color:#0000FF;
+}
+
+
+a.logmenu {
+	color:#0000FF;
+}
+
+a.logmenu:active {
+	color:#cc0000;
+}
+
+
+a.menu {
+	font-size: 14px;
+	color:#000000;
+	margin: 0 0 5px 5px;
+}
+
+
+a.menu:hover {
+	color:#0000FF;
+}
+
+a.menu:focus {
+	color:#0000FF;
+}
+
+.selected {
+	background-color:#DFDFDF;
+}
+
+.menuSelected {
+    background-color:#DFDFDF;
+}

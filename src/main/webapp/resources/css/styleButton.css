@@ -1,0 +1,36 @@
+
+.button {
+	width: 155px;
+	background: #004CFF;
+	color: #FFFFFF;
+	font-size: 20px;
+	text-align: center;
+	border: none;
+	padding: 5px 45px;
+    border-radius: 5px;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.button:HOVER {
+	 background: #1662FF;
+}
+.button:ACTIVE {
+	 background: #002CDF;
+}
+.button:FOCUS {
+	outline: none;
+}
+
+
+#ref {
+	padding: 5px 34px;
+	margin: 0;	
+}
+#ref:HOVER {
+	color:#FFFFFF;
+}
+#ref:FOCUS {
+	outline: none;
+}

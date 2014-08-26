@@ -1,0 +1,126 @@
+p {
+	margin: 10px 0 10px 0;
+	color: #333333;
+}
+
+ul {
+	line-height: 30px;
+	list-style: inside url(../images/dot.png);
+	margin: 5px 0 0 20px ; 
+	padding: 5px 0 0 0;
+}
+
+.divBorder {
+    border: solid #cccccc 1px;
+    padding: 10px;
+    margin: 10px;
+}
+
+label {
+	cursor: pointer;
+	color: #333333;
+}
+
+.wrap {
+	position: relative;
+	margin: 10px 0 20px 0;
+}
+
+.goodCheck {
+	position: absolute;
+	top:3px;
+	left: 170px ;
+	padding: 3px;
+	background: #00F100;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	border: none;
+    border-radius: 5px;
+    display:none;
+
+}
+
+.badCheck {
+	position: absolute;
+	top:3px;
+	left: 170px ;
+	padding: 3px 8px;
+	background: #cc0000;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	border: none;
+  	border-radius: 5px;
+  	display:none;
+}
+
+.checkInfo {
+	position: absolute;
+	top: 5px;
+	left: 205px;
+	color: #cc0000;
+	font: 12px Verdana;
+	display:none;
+}
+
+.count {
+	position: absolute;
+	top: -15px;
+	left: 60px;
+	color: #000000;
+	font: 12px Verdana;
+}
+
+.input {
+	font: 12px Verdana;
+	border: 1px solid #333333;	
+	height: 25px;
+	width: 140px;
+	background-color: #f4f9ff;
+	font-size: 14px;
+	padding: 0 7px;
+}
+
+.input:FOCUS {
+	border: 2px solid #1351b4;
+	background: none;
+	background-color: #ffffff;
+}
+
+.open {
+	padding: 5px;
+	margin: 0 14px;
+	background: #00F100;
+	color: #FFFFFF;
+	font-size: 20px;
+	text-align: center;
+	border: none;
+    border-radius: 5px;
+
+}
+
+.close {
+	padding: 5px;
+	margin: 0 14px;
+	background: #F61626;
+	color: #FFFFFF;
+	font-size: 20px;
+	text-align: center;
+	border: none;
+    border-radius: 5px;	
+}
+
+.exception {
+	font: 12px Verdana;
+	color: #FF0F22;
+	margin: 10px;	
+}
+
+.succesful {
+	font: 12px Verdana;
+	margin: 10px;
+	color: #008000;
+}

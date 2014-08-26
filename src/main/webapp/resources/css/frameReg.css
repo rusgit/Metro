@@ -1,0 +1,38 @@
+
+#wrapper {
+	width: 800px;
+	margin: 0 auto;
+	font: 12px Verdana;
+	border: 1px solid #cccccc;
+	background-color: #F2F2F2;
+}
+
+#header {
+	margin-bottom: 10px;
+	background-image: url(../images/MetroHeader.jpg);	
+	background-repeat: no-repeat;
+	height: 173px;
+}
+
+#content {
+	margin: 5px auto 15px auto;
+	width: 400px;
+	height: 600px;
+	border: 1px solid #cccccc;
+	background-color: #F8F8F8;
+}
+
+#footer {
+	width: 800px;
+	height: 50px;
+	background-color: #F8F8F8;
+}
+#footerPlace {
+	float: left;
+	margin: 18px 0 20px 340px;
+	color: #BFBFBF
+}
+
+.clear {
+	clear: both;
+}

@@ -1,0 +1,24 @@
+
+table, td, th {
+	font: 12px Verdana;
+	border: 1px solid #454E5E;
+	text-align: center;
+	margin: 20px auto;
+}
+
+table {
+	width: 500px;
+	border-collapse: collapse;
+	color: #000000;
+}
+
+td {
+	height: 20px;
+	background-color: #ffffff;
+}
+
+th {
+	height: 30px;
+	font-weight: bold;
+	background-color: #D8D8D8;
+}

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:mvc="http://www.springframework.org/schema/mvc" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+    http://www.springframework.org/schema/util 
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd 
+    http://www.springframework.org/schema/tx 
+    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd " >
+ 
+
+ 	<context:annotation-config />
+	<context:component-scan base-package="ua.me.metro.**" />
+	<context:property-placeholder location="classpath:db.properties" />
+	
+ 	<tx:annotation-driven transaction-manager="transactionManagerHibernate"/>
+    
+ <!-- HIBERNATE TRANSACTION MANAGER -->
+ 	
+    <bean id="transactionManagerHibernate" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+	  <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+  
+   <!-- DATA SOURCE -->
+ 	
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+    	<property name="driverClass" value="${driver}" />
+        <property name="jdbcUrl" value="${url}" />
+        <property name="user" value="${userName}" />
+        <property name="password" value="${password}" /> 
+
+        <property name="acquireIncrement" value="3" />
+        <property name="minPoolSize" value="1" />
+        <property name="maxPoolSize" value="10" />
+        <property name="maxIdleTime" value="3000" />
+ 	</bean>
+ 
+ <!-- HIBERNATE SESSION FACTORY -->
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">     
+       	   <property name="dataSource" ref="dataSource"/>
+       	   <property name="packagesToScan" value="ua.me.metro.domain" />        	   	       	
+       	   <property name="hibernateProperties">
+     		 <props>	      		
+        		<prop key="hibernate.dialect">${dialect}</prop>
+        		<prop key="hibernate.show_sql">false</prop>
+        		<prop key="hibernate.hbm2ddl.auto">update</prop>
+        		<prop key="hibernate.temp.use_jdbc_metadata_defaults">false</prop>	
+     		 </props>
+   		</property>
+  	</bean>
+
+
+    <util:map id="initialCards" >
+        <entry key="1">
+            <bean class="ua.me.metro.domain.NumberCard">
+                <constructor-arg index="0"><null/></constructor-arg>
+                <constructor-arg index="1" value="true" />
+                <constructor-arg index="2" value="5" />
+            </bean>
+        </entry>
+        <entry key="2">
+            <bean class="ua.me.metro.domain.NumberCard">
+                <constructor-arg index="0"><null/></constructor-arg>
+                <constructor-arg index="1" value="true" />
+                <constructor-arg index="2" value="10" />
+            </bean>
+        </entry>
+        <entry key="3">
+            <bean class="ua.me.metro.domain.NumberCard">
+                <constructor-arg index="0"><null/></constructor-arg>
+                <constructor-arg index="1" value="true" />
+                <constructor-arg index="2" value="15" />
+            </bean>
+        </entry>
+        <entry key="4">
+            <bean class="ua.me.metro.domain.UnlimCard">
+                <constructor-arg index="0"><null/></constructor-arg>
+                <constructor-arg index="1" value="true" />
+                <constructor-arg index="2" value="Ruslan" />
+                <constructor-arg index="3" value="Borisov" />
+            </bean>
+        </entry>
+        <entry key="5">
+            <bean class="ua.me.metro.domain.UnlimCard">
+                <constructor-arg index="0"><null/></constructor-arg>
+                <constructor-arg index="1" value="true" />
+                <constructor-arg index="2" value="Antom" />
+                <constructor-arg index="3" value="Zemlyankyn" />
+            </bean>
+        </entry>
+        <entry key="6">
+            <bean class="ua.me.metro.domain.UnlimCard">
+                <constructor-arg index="0"><null/></constructor-arg>
+                <constructor-arg index="1" value="true" />
+                <constructor-arg index="2" value="Anton" />
+                <constructor-arg index="3" value="Plastovchek" />
+            </bean>
+        </entry>
+        <entry key="7">
+            <bean class="ua.me.metro.domain.TimeCard">
+                <constructor-arg index="0"><null/></constructor-arg>
+                <constructor-arg index="1" value="true" />
+                <constructor-arg index="2" value="YEAR" />
+                <constructor-arg index="3"><null/></constructor-arg>
+            </bean>
+        </entry>
+        <entry key="8">
+            <bean class="ua.me.metro.domain.TimeCard">
+                <constructor-arg index="0"><null/></constructor-arg>
+                <constructor-arg index="1" value="true" />
+                <constructor-arg index="2" value="MONTH" />
+                <constructor-arg index="3"><null/></constructor-arg>
+            </bean>
+        </entry>
+        <entry key="9">
+            <bean class="ua.me.metro.domain.TimeCard">
+                <constructor-arg index="0"><null/></constructor-arg>
+                <constructor-arg index="1" value="true" />
+                <constructor-arg index="2" value="QUARTER" />
+                <constructor-arg index="3"><null/></constructor-arg>
+            </bean>
+        </entry>
+    </util:map>
+    
+</beans>
