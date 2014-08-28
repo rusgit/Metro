@@ -38,8 +38,7 @@ public class UnlimCard extends Card implements Serializable {
 	
 	
 	public UnlimCard(Integer id, boolean active, String name, String lastName) {
-		setId(id);
-		setActive(active);
+        super(id,active);
 		this.name = name;
 		this.lastName = lastName;
 			

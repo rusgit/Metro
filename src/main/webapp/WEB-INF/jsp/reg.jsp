@@ -22,62 +22,58 @@
 </head>
 <body>
 	<div id="wrapper">
-			<div id="header"></div>
+        <div id="header"></div>
 
-			<div id="content">
+        <div id="content">
+
+        <div  class="divBorder">
+            <form id="formReg" action="<c:url value="/reg/submit"/>" method="POST">
+
+
+                <p class="question"><label for="username">Enter Your Login:</label></p>
+                <div class="wrap">
+                    <input id="username" class="input" type="text" name="username" maxlength="10">
+                    <div id="usernameOK" class="goodCheck dispNone"> OK </div>
+                    <div id="usernameX" class="badCheck dispNone"> X </div>
+                    <div id="usernameInfo" class="checkInfo dispNone" >minimum 5 symbols</div>
+                </div>
+
+                <p class="question"><label for="password">Enter Password:</label></p>
+                <div class="wrap">
+                    <input id="pass" class="input" type="password" name="password" maxlength="10">
+                    <div id="passOK" class="goodCheck dispNone"> OK </div>
+                    <div id="passX" class="badCheck dispNone"> X </div>
+                    <div id="passInfo" class="checkInfo dispNone" >minimum 5 symbols</div>
+                </div>
+
+                <p class="question"><label for="passwordRepeat">Repeat Password:</label></p>
+                <div class="wrap">
+                    <input id="repeatPass" class="input" name="passwordRepeat" maxlength="10">
+                    <div id="repeatPassOK" class="goodCheck dispNone"> OK </div>
+                    <div id="repeatPassX" class="badCheck dispNone"> X </div>
+                    <div id="repeatPassInfo" class="checkInfo dispNone" >wrong repeat password</div>
+                </div>
+
+                <c:if test="${not empty exception}">
+                    <p class="exception">${exception}</p>
+                </c:if>
+
+                    <p class="question"><label for="inp">Enter Your e-mail:</label></p>
+                <div class="wrap">
+                    <input id="email" class="input" type="text" name="email">
+                    <div id="emailOK" class="goodCheck dispNone"> OK </div>
+                    <div id="emailX" class="badCheck dispNone"> X </div>
+                    <span id="emailInfo" class="checkInfo dispNone" >wrong format</span>
+                </div>
+                <p><input id="buttonReg" class="button" type="submit" value="SEND"></p>
+            </form>
+        </div>
 			
-			<form id="formReg" action="<c:url value="/reg/submit"/>" method="POST">
-		<fieldset>
-			<legend> General </legend>
-			
-				<p class="question"><label for="username">Enter Your Login:</label></p>
-				<div class="wrap">
-					<input id="username" class="input" type="text" name="username" maxlength="10">
-					<div id="usernameOK" class="goodCheck dispNone"> OK </div>
-					<div id="usernameX" class="badCheck dispNone"> X </div>
-					<div id="usernameInfo" class="checkInfo dispNone" >minimum 5 symbols</div>
-				</div>
-				
-				<p class="question"><label for="password">Enter Password:</label></p>
-				<div class="wrap">
-					<input id="pass" class="input" type="password" name="password" maxlength="10">
-					<div id="passOK" class="goodCheck dispNone"> OK </div>
-					<div id="passX" class="badCheck dispNone"> X </div>
-					<div id="passInfo" class="checkInfo dispNone" >minimum 5 symbols</div>
-				</div>				
-				
-				<p class="question"><label for="passwordRepeat">Repeat Password:</label></p>
-				<div class="wrap">	
-					<input id="repeatPass" class="input" name="passwordRepeat" maxlength="10">
-					<div id="repeatPassOK" class="goodCheck dispNone"> OK </div>
-					<div id="repeatPassX" class="badCheck dispNone"> X </div>
-					<div id="repeatPassInfo" class="checkInfo dispNone" >wrong repeat password</div>
-				</div>	
-				
-				<c:if test="${not empty exception}">
-	  				<p class="exception">${exception}</p>
-				</c:if>			
-		</fieldset>
-	
-		<fieldset>
-			<legend> Additional </legend>
-				<p class="question"><label for="inp">Enter Your e-mail:</label></p>
-			<div class="wrap">
-				<input id="email" class="input" type="text" name="email">
-				<div id="emailOK" class="goodCheck dispNone"> OK </div>
-				<div id="emailX" class="badCheck dispNone"> X </div>
-				<span id="emailInfo" class="checkInfo dispNone" >wrong format</span>
-			</div>
-		</fieldset>
-					
-			<p><input id="buttonReg" class="button" type="submit" value="SEND"></p>
-	</form>
-			
-			</div>
-			<div class="clear"></div>
-			<div id="footer">
-				<p id="footerPlace">Borisov Ruslan, 2014</p>
-			</div>
+        </div>
+        <div class="clear"></div>
+        <div id="footer">
+            <p id="footerPlace">Borisov Ruslan, 2014</p>
+        </div>
 	</div>		
 
 </body>

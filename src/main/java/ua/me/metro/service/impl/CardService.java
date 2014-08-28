@@ -7,9 +7,9 @@ import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.servlet.ModelAndView;
 import ua.me.metro.dao.ICardDAO;
 import ua.me.metro.domain.Card;
+import ua.me.metro.domain.NumberCard;
 import ua.me.metro.domain.User;
 import ua.me.metro.exceptions.NotFoundException;
 import ua.me.metro.exceptions.IllegalParameterException;
@@ -147,7 +147,5 @@ public class CardService implements ICardService {
 
         return false;
     }
-
-	
 
 }

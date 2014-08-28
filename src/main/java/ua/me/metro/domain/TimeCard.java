@@ -49,8 +49,7 @@ public class TimeCard extends Card implements Serializable {
 	}
 	
 	public TimeCard(Integer id, boolean active, ValidityTime validity, Date expirationDate) {
-		setId(id);
-		setActive(active);
+        super(id,active);
 		this.validity = validity;
 		this.expirationDate = expirationDate;
 	}

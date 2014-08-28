@@ -1,7 +1,6 @@
 package ua.me.metro.controller;
 
 import javax.inject.Inject;
-
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +12,7 @@ import ua.me.metro.domain.TimeCard.ValidityTime;
 import ua.me.metro.service.ICardService;
 
 @Controller
-public class BuyController { //asd
+public class BuyController {
 
 	@Inject
     ICardService cardService;

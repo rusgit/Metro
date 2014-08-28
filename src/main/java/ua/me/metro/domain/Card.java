@@ -71,8 +71,6 @@ abstract public class Card implements Serializable {
 	@ManyToOne
     @JoinColumn(name="user_id")
 	private User user;
-	
-
 
 	public User getUser() {
 		return user;
@@ -93,7 +91,12 @@ abstract public class Card implements Serializable {
 		this.active = active;
 	}
 
-	public Card(){
+    public Card(){
+    }
+
+	public Card(Integer id, boolean active){
+        this.id = id;
+        this.active = active;
 	}
 
 	abstract public boolean use(Card card);

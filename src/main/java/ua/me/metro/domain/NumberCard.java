@@ -14,8 +14,7 @@ public class NumberCard extends Card implements Serializable {
 	
 	@Column(name="numberTrip")
 	private int numberTrip;
-	
-	
+
 	public int getNumberTrip() {
 		return numberTrip;
 	}
@@ -27,8 +26,7 @@ public class NumberCard extends Card implements Serializable {
 	}
 	
 	public NumberCard(Integer id, boolean active, int numberTrip) {
-		setId(id);
-		setActive(active);
+        super(id,active);
 		this.numberTrip = numberTrip;
 		
 	}
